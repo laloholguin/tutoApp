@@ -19,7 +19,7 @@
             Iniciar App
           </button>
         </ion-nav-buttons>
-        <ion-slide-box on-slide-changed="slideHasChanged(index)">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
         	<ion-slide>
         		<h3>Thank for choosing the Awesome App!</h3>
         		<div id="logo">
@@ -44,6 +44,7 @@
 	            <p>
 	              Too bad!
 	            </p>
-        	</ion-slide>
+          </ion-slide>
+          <pre>{{slideIndex}}</pre>
         </ion-slide-box>
 </ion-view>

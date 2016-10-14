@@ -36,6 +36,12 @@ angular.module('starter', ['ionic', 'introModule', 'beginModule'])
     url: '/init',
     templateUrl: 'templates/inicio.html',
     controller: 'IntroController'
+})
+
+    .state('begin', {
+    url: '/begin',
+    templateUrl: 'templates/begin.html',
+    controller: 'BeginController'
 });
 
   // if none of the above states are matched, use this as the fallback
