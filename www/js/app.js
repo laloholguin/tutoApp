@@ -42,8 +42,31 @@ angular.module('starter', ['ionic', 'introModule', 'beginModule'])
     url: '/begin',
     templateUrl: 'templates/begin.html',
     controller: 'BeginController'
-});
+})
 
+   .state('tabs', {
+    url: '/tab',
+    templateUrl: 'templates/tabs.html',
+})
+
+      .state('tabs.home', {
+    url: '/home',
+    views: {
+      'home-tab':{
+    templateUrl: 'templates/home.html',
+    controller: 'HomeTabCtrl'
+      }
+  }
+})
+
+      .state('tabs.facts', {
+    url: '/facts',
+    views: {
+      'home-tab':{
+    templateUrl: 'templates/home.html',
+      }
+  }
+});
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/init');
 
